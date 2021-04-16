@@ -9,10 +9,9 @@
 }
 
 .navbar a {
-   @include fontFamily;
-    letter-spacing: 0px;
-    font-size: 2vw;
-    min-height: 1.5vmin
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0px;
+  font-size: 15px;
 }
 
 h1 {
