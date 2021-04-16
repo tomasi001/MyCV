@@ -203,12 +203,15 @@ p a {
     display: none;
 }
 
+// set container to contain video
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
     height:0;
 }
+
+// set video size and position in container
 .video-responsive iframe{
     left:15%;
     top:15%;
