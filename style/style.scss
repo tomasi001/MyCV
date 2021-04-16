@@ -32,7 +32,8 @@ h1{
 // set font and letter spacing
 h2{
     @include fontFamily;
-    font-size: 50px;
+    // font-size: 50px;
+    font-size: 5vw;
     letter-spacing: 15px;
 }
 
@@ -215,6 +216,4 @@ p a {
     width:70%;
     position:absolute;
 }
-html {
-    font-size: 2vw;
-}
+
