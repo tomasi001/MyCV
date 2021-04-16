@@ -11,7 +11,8 @@
 .navbar a {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0px;
-  font-size: 20px;
+  min-height: 1vmax;
+  max-height: 1.5vmax;
 }
 
 h1 {
