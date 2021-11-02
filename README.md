@@ -1,3 +1,6 @@
+### Usage
+Click [Here](https://tomasi001.github.io/) to view the Website: 
+
 # MyCV
 Here is a website i made to showcase Web Development and various other skills i have accumulated over time
 
@@ -11,5 +14,4 @@ Here is a website i made to showcase Web Development and various other skills i 
 ###### Education
 ###### Contact
 
-### Usage
-Click [Here](https://tomasi001.github.io/) to view the Website: 
+
