@@ -1,272 +1,159 @@
+html {
+  /* body won't work ¯\_(ツ)_/¯ */
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: #9de2ea;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+svg {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.out-top {
+  animation: rotate 20s linear infinite;
+  transform-origin: 13px 25px;
+}
+.in-top {
+  animation: rotate 10s linear infinite;
+  transform-origin: 13px 25px;
+}
+.out-bottom {
+  animation: rotate 25s linear infinite;
+  transform-origin: 84px 93px;
+}
+.in-bottom {
+  animation: rotate 15s linear infinite;
+  transform-origin: 84px 93px;
+}
+
+#introHeader {
+  height: 100vh;
+}
+
+.centeredSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.centeredSection p {
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: #000000;
+}
+
+/* Default style */
+.paddedContainer {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* When the viewport is 800px or less, decrease padding */
+@media (max-width: 800px) {
+  .paddedContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* When the viewport is 500px or less, decrease padding further */
+@media (max-width: 500px) {
+  .paddedContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+}
+
 #navBar {
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 10px;
 }
 
-.bg-black {
-  background-color: black;
-}
-
 .navbar a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 64px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
+  line-height: 25px;
+}
+
+.titles {
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+
+/* When the viewport is 800px or less, decrease padding */
+@media (max-width: 800px) {
+  .titles {
+    display: flex;
+    flex-direction: column;
+  }
+  .hideBreaks {
+    display: none;
+  }
+}
+
+.frost {
+  backdrop-filter: blur(40px);
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 5vw;
   letter-spacing: 15px;
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
 }
 
-p {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2px;
-  line-height: 25px;
-  padding-right: 80px;
-  padding-left: 80px;
-  color: #7c7373;
-}
-
-#titles {
-  letter-spacing: 2px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
-  color: #7c7373;
-}
-
-.col img {
-  border-radius: 1000px;
-}
-
-p a {
-  color: #7c7373;
-}
-
-#introPara p {
-  display: none;
-  letter-spacing: -3px;
-}
-
-.textAnimLetter {
-  -webkit-animation: letter-spacing 2s ease infinite;
-          animation: letter-spacing 2s ease infinite;
-}
-
-@-webkit-keyframes letter-spacing {
-  20% {
-    letter-spacing: -2px;
-  }
-  40% {
-    letter-spacing: -1px;
-  }
-  60% {
-    letter-spacing: 0px;
-  }
-  80% {
-    letter-spacing: 1px;
-  }
-  100% {
-    letter-spacing: 2px;
-  }
-}
-
-@keyframes letter-spacing {
-  20% {
-    letter-spacing: -2px;
-  }
-  40% {
-    letter-spacing: -1px;
-  }
-  60% {
-    letter-spacing: 0px;
-  }
-  80% {
-    letter-spacing: 1px;
-  }
-  100% {
-    letter-spacing: 2px;
-  }
-}
-
-#projects .row {
-  display: none;
-}
-
-#expPara {
-  line-height: 2px;
-}
-
-.textAnimLine {
-  -webkit-animation: line-height 1s ease infinite;
-          animation: line-height 1s ease infinite;
-}
-
-@-webkit-keyframes line-height {
-  4.17% {
-    line-height: 2px;
-  }
-  8.34% {
-    line-height: 3px;
-  }
-  12.51% {
-    line-height: 4px;
-  }
-  16.68% {
-    line-height: 5px;
-  }
-  20.85% {
-    line-height: 6px;
-  }
-  25.02% {
-    line-height: 7px;
-  }
-  29.19% {
-    line-height: 8px;
-  }
-  33.36% {
-    line-height: 9px;
-  }
-  37.53% {
-    line-height: 10px;
-  }
-  41.7% {
-    line-height: 11px;
-  }
-  45.87% {
-    line-height: 12px;
-  }
-  50.04% {
-    line-height: 13px;
-  }
-  54.21% {
-    line-height: 14px;
-  }
-  58.38% {
-    line-height: 15px;
-  }
-  62.55% {
-    line-height: 16px;
-  }
-  66.72% {
-    line-height: 17px;
-  }
-  70.89% {
-    line-height: 18px;
-  }
-  75.06% {
-    line-height: 19px;
-  }
-  79.23% {
-    line-height: 20px;
-  }
-  83.4% {
-    line-height: 21px;
-  }
-  87.57% {
-    line-height: 22px;
-  }
-  91.74% {
-    line-height: 23px;
-  }
-  95.91% {
-    line-height: 24px;
-  }
-  100% {
-    line-height: 25px;
-  }
-}
-
-@keyframes line-height {
-  4.17% {
-    line-height: 2px;
-  }
-  8.34% {
-    line-height: 3px;
-  }
-  12.51% {
-    line-height: 4px;
-  }
-  16.68% {
-    line-height: 5px;
-  }
-  20.85% {
-    line-height: 6px;
-  }
-  25.02% {
-    line-height: 7px;
-  }
-  29.19% {
-    line-height: 8px;
-  }
-  33.36% {
-    line-height: 9px;
-  }
-  37.53% {
-    line-height: 10px;
-  }
-  41.7% {
-    line-height: 11px;
-  }
-  45.87% {
-    line-height: 12px;
-  }
-  50.04% {
-    line-height: 13px;
-  }
-  54.21% {
-    line-height: 14px;
-  }
-  58.38% {
-    line-height: 15px;
-  }
-  62.55% {
-    line-height: 16px;
-  }
-  66.72% {
-    line-height: 17px;
-  }
-  70.89% {
-    line-height: 18px;
-  }
-  75.06% {
-    line-height: 19px;
-  }
-  79.23% {
-    line-height: 20px;
-  }
-  83.4% {
-    line-height: 21px;
-  }
-  87.57% {
-    line-height: 22px;
-  }
-  91.74% {
-    line-height: 23px;
-  }
-  95.91% {
-    line-height: 24px;
-  }
-  100% {
-    line-height: 25px;
-  }
-}
-
-#contact .row {
-  display: none;
+.bg-black {
+  background-color: black;
 }
 
 .video-responsive {
@@ -278,9 +165,120 @@ p a {
 
 .video-responsive iframe {
   left: 15%;
-  top: 15%;
+  top: 10%;
   height: 70%;
   width: 70%;
   position: absolute;
 }
-/*# sourceMappingURL=style.css.map */
+
+#projects {
+  height: fit-content;
+}
+
+.experienceLocationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* When the viewport is 900px or less, decrease padding */
+@media (max-width: 900px) {
+  .experienceLocationContainer {
+    display: none;
+  }
+}
+
+.experienceLocationContainerMobile {
+  display: none;
+}
+
+/* When the viewport is 900px or less, decrease padding */
+@media (max-width: 900px) {
+  .experienceLocationContainerMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+/* When the viewport is 900px or less, decrease padding */
+@media (max-width: 900px) {
+  #education {
+    display: none;
+  }
+}
+
+.educationContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#educationMobile {
+  display: none;
+}
+
+/* When the viewport is 900px or less, decrease padding */
+@media (max-width: 900px) {
+  #educationMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.customH3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+/* When the viewport is 900px or less, decrease padding */
+@media (max-width: 900px) {
+  #contact {
+    display: none;
+  }
+}
+
+#contactMobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  #contactMobile {
+    display: block;
+  }
+}
+
+.contactContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contactContainerMobile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contactColumns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactColumns div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.contactColumns img {
+  border-radius: 1000px;
+}
