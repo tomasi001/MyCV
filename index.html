@@ -91,7 +91,9 @@
                   <a class="nav-link" href="#projects">PROJECTS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">CONTACT</a>
+                  <a id="dynamicLink" class="nav-link" href="#contact"
+                    >CONTACT</a
+                  >
                 </li>
               </ul>
             </div>
@@ -105,7 +107,9 @@
           <span class="hideBreaks"> <br /><br /><br /><br /></span>
         </p>
 
-        <h1 id="introSubHeader" class="text-center">Hello, I'm Tom Shields</h1>
+        <h1 id="introSubHeader" class="text-center px-3">
+          Hello, I'm Tom Shields
+        </h1>
       </section>
       <!-- INTRODUCTORY PARAGRAPH -->
       <section id="introPara" class="centeredSection">
@@ -136,10 +140,9 @@
       <!-- PROJECTS -->
       <section id="projects" class="bg-black text-light">
         <!-- create one long column showing carousels of videos -->
-        <div class="col text-center">
+        <div class="col text-center" id="carousel-section">
           <section class="col">
-            <br />
-            <h2>Physics & VFX Code</h2>
+            <h2 class="py-2">Physics & VFX Code</h2>
             <!-- create carousel with THREE images and a caption below each image -->
             <div
               id="carouselExampleControls1"
@@ -206,7 +209,6 @@
             </div>
           </section>
           <section class="col">
-            <br />
             <h2>Creative Code</h2>
             <!-- create carousel with THREE images and a caption below each image -->
             <div
@@ -267,12 +269,7 @@
             </div>
           </section>
           <section class="col">
-            <br />
-            <h2>3D Modelling</h2>
-            <br />
-            <br />
-            <br />
-            <br />
+            <h2 class="py-4">3D Modelling</h2>
             <!-- create carousel with THREE images and a caption below each image -->
             <div
               id="carouselExampleControls2"
@@ -321,10 +318,7 @@
             </div>
           </section>
           <section class="col">
-            <br />
-            <h2>Animation</h2>
-            <br />
-            <br />
+            <h2 class="py-2">Animation</h2>
             <!-- create carousel with THREE images and a caption below each image -->
             <div
               id="carouselExampleControls3"
@@ -369,13 +363,77 @@
             </div>
           </section>
         </div>
+        <div class="mobileProjectDisplay">
+          <section>
+            <h2 class="text-center py-4">Physics & VFX Code</h2>
+            <div class="video-responsive-mobile">
+              <iframe
+                width="790"
+                height="444"
+                src="https://www.youtube.com/embed/Ng_S7tC1ulw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <div class="video-responsive-mobile">
+              <iframe
+                width="660"
+                height="360"
+                src="https://www.youtube.com/embed/sEDM365aRQ0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </section>
+          <section class="col">
+            <h2 class="text-center py-4">Creative Code</h2>
+            <div class="video-responsive-mobile">
+              <video src="videos/CubeExpress.mp4" width="100%" controls></video>
+            </div>
+            <div class="video-responsive-mobile">
+              <iframe
+                width="640"
+                height="400"
+                src="https://www.youtube.com/embed/frbJI9FF2Ko"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </section>
+          <section class="col px-4">
+            <h2 class="text-center py-4">3D Modelling</h2>
+            <div class="video-responsive-mobile">
+              <video src="videos/ENVIRONMENT.mp4" width="100%" controls></video>
+            </div>
+            <div class="video-responsive-mobile">
+              <video src="videos/KONG.mp4" width="100%" controls></video>
+            </div>
+          </section>
+          <section class="col px-4">
+            <h2 class="text-center py-2">Animation</h2>
+            <div>
+              <video src="videos/HEAVENLY.mp4" width="100%" controls></video>
+            </div>
+            <div>
+              <video src="videos/DOMINO.mp4" width="100%" controls></video>
+            </div>
+          </section>
+        </div>
       </section>
       <!-- EXPERIENCE -->
-      <section id="experience" class="centeredSection">
-        <br />
-        <h2 class="text-center" id="expHead">Experience</h2>
+      <section id="experience" class="centeredExperienceSection">
+        <h2 class="text-center pt-4" id="expHead">Experience</h2>
         <div class="container paddedContainer">
-          <p class="text-center gray-background" id="expPara">
+          <p class="text-center" id="expPara">
             <br />
             My tech journey has seen rapid growth from Graduate to Intermediate
             Software Engineer. <br /><br />
@@ -549,11 +607,10 @@
         </div>
       </section>
       <!-- CONTACT -->
-      <section id="contact">
-        <br />
-        <h2 class="text-center">Want To Get In Touch?</h2>
+      <section class="contact" id="contact">
+        <h2 class="pt-4 text-center">Get In Touch</h2>
 
-        <div class="contactContainer">
+        <div class="pb-5 contactContainer">
           <div class="contactColumns">
             <div>
               <i class="fa fa-github fa-3x" aria-hidden="true"></i>
@@ -585,22 +642,18 @@
             />
           </div>
         </div>
-
-        <br /><br /><br /><br />
       </section>
+      <!-- CONTACT MOBILE -->
+      <section class="contactMobile" id="contactMobile">
+        <h2 class="pt-4 text-center">Get In Touch</h2>
 
-      <!-- CONTACT -->
-      <section id="contactMobile">
-        <br />
-        <h2 class="text-center">Want To Get In Touch?</h2>
-
-        <div class="contactContainerMobile">
+        <div class="pb-5 contactContainerMobile">
           <div class="contactColumns">
             <img
               src="images/contactImage.jpg"
               alt="Contact Photo"
-              width="114"
-              height="171"
+              width="224"
+              height="335"
             />
           </div>
           <div class="contactColumns">
@@ -626,8 +679,6 @@
             </div>
           </div>
         </div>
-
-        <br /><br /><br /><br />
       </section>
     </div>
     <!-- link to jquery -->
@@ -649,5 +700,7 @@
       src="https://kit.fontawesome.com/fcd80a63d5.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="index.js"></script>
   </body>
 </html>
